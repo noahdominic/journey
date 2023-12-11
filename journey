@@ -2,32 +2,32 @@
 
 # journey
 #
-# A script for managing a text file-based journal
+# Journey is a basic CLI journalling program that allows you to create, manage,
+# and access daily entries with a text-file--based system, simplifying your
+# journalling experience.
 #
 # Written by Noah Dominic Miranda Silvio
 # Copyright (c) 2022 - 2023 Noah Dominic Miranda Silvio.
 # All rights reserved.
+#
+# This software is released under the EU Public Licence v. 1.2.
 #
 
 print_manual() {
     echo "JOURNEY"
     echo
     echo "NAME"
-    echo "       journey - A script for managing a text file-based journal"
+    echo "       journey - A CLI tool for managing a text-file--based journal"
     echo
     echo "SYNOPSIS"
     echo "       journey <command>"
-    echo
-    echo "DESCRIPTION"
-    echo "       The is a bash script for managing a journal.   It provides various"
-    echo "       commands for different journal operations. "
     echo
     echo "COMMANDS"
     echo "       The following commands are supported by the Journey script:"
     echo
     echo "       init   Initialises the Journey base folder."
     echo
-    echo "       new    Initializes a new journal entry for the current day and opens it"
+    echo "       new    Initialises a new journal entry for the current day and opens it"
     echo "              in the default editor (Vim).  This may be changed by editing "
     echo "              the \`\$EDITOR\` variable in the script."
     echo
