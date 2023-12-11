@@ -17,7 +17,7 @@ print_manual() {
     echo "JOURNEY"
     echo
     echo "NAME"
-    echo "       journey - A CLI tool for managing a text-file--based journal"
+    echo "       journey - A basic CLI journalling program"
     echo
     echo "SYNOPSIS"
     echo "       journey <command>"
