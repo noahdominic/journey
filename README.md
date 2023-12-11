@@ -1,6 +1,4 @@
-# JOURNEY
-
-## Overview
+# Journey
 
 Journey is a straightforward CLI journalling program that allows you to create, manage, and access daily entries with a text-file–based system, simplifying your journalling experience.
 
@@ -45,4 +43,4 @@ This software is released under the EU Public Licence v. 2.0.
 
 For any bugs, issues, or support, please contact `noah@noahdominic.com`. We welcome your feedback to enhance your Journey experience.
 
-Happy journaling!
+Happy journalling!
