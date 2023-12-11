@@ -2,7 +2,7 @@
 
 # journey
 #
-# Journey is a basic CLI journalling program that allows you to create, manage,
+# Journey is a straightforward CLI journalling program that allows you to create, manage,
 # and access daily entries with a text-file--based system, simplifying your
 # journalling experience.
 #
@@ -17,7 +17,7 @@ print_manual() {
     echo "JOURNEY"
     echo
     echo "NAME"
-    echo "       journey - A basic CLI journalling program"
+    echo "       journey - A straightforward CLI journalling program"
     echo
     echo "SYNOPSIS"
     echo "       journey <command>"
@@ -28,14 +28,13 @@ print_manual() {
     echo "       init   Initialises the Journey base folder."
     echo
     echo "       new    Initialises a new journal entry for the current day and opens it"
-    echo "              in the default editor (Vim).  This may be changed by editing "
-    echo "              the \`\$EDITOR\` variable in the script."
+    echo "              in the default editor."
     echo
     echo "       show   Displays the contents of the current day's journal entry using"
-    echo "              the 'less' pager."
+    echo "              the \`less\` pager."
     echo
     echo "       write  Opens the current day's journal entry in the default editor"
-    echo "              (Vim) for writing or editing."
+    echo "              for writing or editing."
     echo
     echo "       vim    Opens the current day's journal entry in Vim for writing or"
     echo "              editing."
@@ -43,8 +42,9 @@ print_manual() {
     echo "       nano   Opens the current day's journal entry in the Nano editor for"
     echo "              writing or editing."
     echo
-    echo "       *      If an unrecognized command is provided, the script will display"
-    echo "              a default message."
+    echo "CONFIGURATION"
+    echo "       Users can customise their default editor by editing the \`$EDITOR\`" 
+    echo "       variable in the script."
     echo
     echo "AUTHOR"
     echo "       Written by Noah Dominic Miranda Silvio"
@@ -56,10 +56,11 @@ print_manual() {
     echo "       Please report any bugs or issues to \`noah@noahdominic.com\`."
 }
 
+EDITOR="vim"
+
 JOURNEY_BASEPATH="$HOME/journey"
 TODAY=$(date +'%Y/%m/%d')
 TODAYS_ENTRY="$JOURNEY_BASEPATH/$TODAY"
-EDITOR="vim"
 
 write() {
     eval "$EDITOR" + "$TODAYS_ENTRY"
@@ -86,10 +87,7 @@ case "$1" in
     nano)
         nano "$TODAYS_ENTRY"
         ;;
-    -h) 
-        print_manual | less
-        ;;
     *)
-        echo "usage: journal command"
+        print_manual | less
         ;;
 esac
